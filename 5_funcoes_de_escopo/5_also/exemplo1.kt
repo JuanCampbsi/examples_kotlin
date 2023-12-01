@@ -18,5 +18,8 @@ fun main() {
         .also {                                          // 2 
             writeCreationLog(it)                         // 3
     }
-
+    val jake = Person("Jake", 30, "Android developer")   // 1
+    .also { (nome, age) ->                                        // 2 
+        writeCreationLog(nome, age)                         // 3
+    }
 }

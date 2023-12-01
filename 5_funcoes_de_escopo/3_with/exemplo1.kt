@@ -13,7 +13,14 @@ fun main() {
         println("$host:$port")
     }
 
-    // ao invés de:
+    // instead of:
     println("${configuration.host}:${configuration.port}")    
-
+    
+    configuration.run {
+       println("$host:$port")
+    }
+    
+    configuration.let { (host, port) ->
+        println("$host:$port")
+    }
 }
